@@ -1,0 +1,83 @@
+1. Используйте команды операционной системы Linux и создайте
+две новых директории – «Игрушки для школьников» и «Игрушки
+для дошколят»
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ mkdir Игрушки_для_школьников
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ mkdir Игрушки_для_дошколят
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ ll
+итого 16
+drwxrwxr-x 4 pcih pcih 4096 мар 13 22:27 ./
+drwxr-xr-x 22 pcih pcih 4096 мар 13 22:26 ../
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:27 Игрушки_для_дошколят/
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:26 Игрушки_для_школьников/
+2. Создайте в директории «Игрушки для школьников» текстовые
+файлы - «Роботы», «Конструктор», «Настольные игры»
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ cd Игрушки_для_школьников
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_школьников$ touch
+Роботы.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_школьников$ touch
+Конструктор.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_школьников$ touch
+Настольные_игры.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_школьников$ ll
+итого 8
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:30 ./
+drwxrwxr-x 4 pcih pcih 4096 мар 13 22:27 ../
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 игры.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 Конструктор.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 Настольные_игры.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:29 Роботы.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_школьников$ cd ..
+3. Создайте в директории «Игрушки для дошколят» текстовые
+файлы «Мягкие игрушки», «Куклы», «Машинки»
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ cd Игрушки_для_дошколят
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_дошколят$ touch
+Мягкие_игрушки.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_дошколят$ touch
+Куклы.txtpcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_дошколят$
+touch Машинки.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_дошколят$ ll
+итого 8
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:32 ./
+drwxrwxr-x 4 pcih pcih 4096 мар 13 22:27 ../
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Куклы.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Машинки.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Мягкие_игрушки.txt
+pcih@pcih-pc:~/Рабочий стол/ linux_command/Игрушки_для_дошколят$ cd ..
+4. Объединить 2 директории в одну «Имя Игрушки»
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ mkdir Имя_игрушки
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ cp -rl Игрушки_для_школьников/*
+Игрушки_для_дошколят/* Имя_игрушки
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ rm -rf Игрушки_для_школьников
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ rm -rf Игрушки_для_дошколят
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ ll
+итого 12
+drwxrwxr-x 3 pcih pcih 4096 мар 13 22:40 ./
+drwxr-xr-x 22 pcih pcih 4096 мар 13 22:26 ../
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:39 Имя_игрушки/
+5. Переименовать директорию «Имя Игрушки» в «Игрушки»
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ mv Имя_игрушки/ Игрушки
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ ll
+итого 12
+drwxrwxr-x 3 pcih pcih 4096 мар 13 22:42 ./
+drwxr-xr-x 22 pcih pcih 4096 мар 13 22:26 ../
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:39 Игрушки/
+6. Просмотреть содержимое каталога «Игрушки».
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ ll Игрушки/
+итого 8
+drwxrwxr-x 2 pcih pcih 4096 мар 13 22:39 ./
+drwxrwxr-x 3 pcih pcih 4096 мар 13 22:42 ../
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 игры.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 Конструктор.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Куклы.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Машинки.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:32 Мягкие_игрушки.txt
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:30 Настольные
+-rw-rw-r-- 1 pcih pcih 0 мар 13 22:29 Роботы.txt
+7. Установить и удалить snap-пакет. (Любой, какой хотите)
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ sudo snap install gimp
+pcih@pcih-pc:~/Рабочий стол/ linux_command$ sudo snap remove gimp
+8. Добавить произвольную задачу для выполнения каждые 3
+минуты (Например, запись в текстовый файл чего-то или
+копирование из каталога А в каталог Б).
+pcih@pcih-pc:~/Рабочий стол/ linux_command$crontab -e
+*/3 * * * * echo 'Geek Brains' >>/home/pcih/desktop/linux_command/Роботы.tx
